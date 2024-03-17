@@ -1247,7 +1247,7 @@ MonoBehaviour:
   timeBetweenShots: 0
   magazineSize: 30
   bulletsPerTap: 1
-  allowButtonHold: 1
+  allowButtonHold: 0
   fpscam: {fileID: 231321055}
   attackPoint: {fileID: 382319216}
   whatIsEnemy:
@@ -1265,7 +1265,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 47029cd71615fc94b9297bd8cbdada85, type: 3}
+  m_audioClip: {fileID: 8300000, guid: baa18be3625e2a343aae62c68813e4ae, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1
