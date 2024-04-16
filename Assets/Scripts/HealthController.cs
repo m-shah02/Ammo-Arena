@@ -7,6 +7,7 @@ public class HealthController : MonoBehaviour
 {
    public float currentPlayerHealth = 100.0f;
    [SerializeField] private float maxPlayerHealth = 100.0f;
+   [SerializeField] private GameObject gameOverPanel;
    [SerializeField] private int regenRate = 1;
    private bool canRegen = false;
 
@@ -54,11 +55,19 @@ public class HealthController : MonoBehaviour
          healCooldown = maxHealCooldown;
          startCooldown = true;
       }
+      else{
+         currentPlayerHealth = 0;
+         GameOver();
+      }
 
    }
 
    void Update()
    {
+      if(currentPlayerHealth <= 0){
+         currentPlayerHealth = 0;
+         GameOver();
+      }
       if(startCooldown)
       {
          healCooldown -= Time.deltaTime;
@@ -84,4 +93,10 @@ public class HealthController : MonoBehaviour
          }
       }
    }
+
+   private void GameOver()
+    {
+        gameOverPanel.SetActive(true); // Show the Game Over panel
+        Time.timeScale = 0;
+    }
 }
