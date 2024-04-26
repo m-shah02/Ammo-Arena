@@ -8,6 +8,7 @@ public class HealthController : MonoBehaviour
    public float currentPlayerHealth = 100.0f;
    [SerializeField] private float maxPlayerHealth = 100.0f;
    [SerializeField] private GameObject gameOverPanel;
+   [SerializeField] private GameObject fpsController;
    [SerializeField] private int regenRate = 1;
    private bool canRegen = false;
 
@@ -98,5 +99,6 @@ public class HealthController : MonoBehaviour
     {
         gameOverPanel.SetActive(true); // Show the Game Over panel
         Time.timeScale = 0;
+        fpsController.SetActive(false);
     }
 }
