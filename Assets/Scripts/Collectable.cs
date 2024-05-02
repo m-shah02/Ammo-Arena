@@ -17,6 +17,7 @@ public class Collectable : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            
             OnCollected?.Invoke();
             Destroy(gameObject);
             collectSound.Play();

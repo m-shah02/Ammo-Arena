@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class GunSystem : MonoBehaviour
 {
@@ -17,10 +18,12 @@ public class GunSystem : MonoBehaviour
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
     [SerializeField] private AudioSource gunshot;
+    [SerializeField] private AudioSource reload;
 
     //Graphics
-    //public GameObject muzzleFlash, bulletHoleGraphic;
-    ////public CamShake camShake;
+    public GameObject muzzleFlash; 
+    //public GameObject bulletHoleGraphic;
+    //public CamShake camShake;
     //public float camShakeMagnitude, camShakeDuration;
 
     public TextMeshProUGUI text;
@@ -39,7 +42,6 @@ public class GunSystem : MonoBehaviour
 
     public void MyInput()
     {
-        Debug.Log("Test");
         if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
         else shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
@@ -67,14 +69,11 @@ public class GunSystem : MonoBehaviour
         // RayCast
         if (Physics.Raycast(fpscam.transform.position, direction, out rayHit, range, whatIsEnemy))
         {
-            Debug.Log("Test2");
-            Debug.Log(rayHit.collider.name);
 
-            // TODO: Look into fix for this
-            //if (rayHit.collider.CompareTag("Enemy"))
-            //{
-            //    rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);
-            //}
+            if (rayHit.collider.CompareTag("Zombie"))
+            {
+                rayHit.collider.GetComponent<DamageController>().TakeDamage(damage);
+            }
         }
 
         // Shake Camera -
@@ -82,8 +81,8 @@ public class GunSystem : MonoBehaviour
         //camShake.Shake(camShakeDuration, camShakeMagnitude);
 
         // Graphics
-        //Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
-        //Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        GameObject flashInstance = Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        StartCoroutine(DestroyAfterDelay(flashInstance, 0.2f));
 
         bulletsLeft--;
         bulletsShot--;
@@ -96,6 +95,11 @@ public class GunSystem : MonoBehaviour
         }
     }
 
+    private IEnumerator DestroyAfterDelay(GameObject objectToDestroy, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(objectToDestroy);
+    }
     private void ResetShot()
     {
         readytoShoot = true;
@@ -103,6 +107,7 @@ public class GunSystem : MonoBehaviour
     }
     private void Reload()
     {
+        reload.Play();
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
     }
