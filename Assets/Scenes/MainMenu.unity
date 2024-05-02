@@ -561,7 +561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 66e5b4883039adb449418916bf16d315, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1069,7 +1069,7 @@ MonoBehaviour:
     colorful, rolling hills and a few scattered trees, under a bright blue sky. The
     ground itself is lush green, with patches of flowers that add bursts of color.
 
-    
+
 
     At
     the center of this map is a large mountain with a winding path that spirals up
@@ -1083,13 +1083,13 @@ MonoBehaviour:
     up from the main ground. This island offers a unique sniping position, but it
     also exposes players to being easily targeted, balancing the risk and reward.
 
-    
 
-    
 
-    
 
-    
+
+
+
+
 
 '
   m_isRightToLeft: 0
@@ -1361,7 +1361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 66e5b4883039adb449418916bf16d315, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1443,18 +1443,18 @@ MonoBehaviour:
     trees, their trunks wide and gnarled, and branches that create a claustrophobic
     canopy overhead, dimming the light and creating deep shadows.
 
-    
 
-    At
-    the heart of the map is an abandoned house. It stands as a crucial focal point
-    for players, offering shelter but also a potential trap due to its limited exits
-    and numerous blind spots.
 
-    
+    At the heart
+    of the map is an abandoned house. It stands as a crucial focal point for players,
+    offering shelter but also a potential trap due to its limited exits and numerous
+    blind spots.
 
-    This map would challenge players to navigate
-    the treacherous terrain, utilize the natural environment for defense, and survive
-    waves of zombies emerging from the shadows of the trees and the decrepit house.'
+
+
+    This map would challenge players to navigate the treacherous
+    terrain, utilize the natural environment for defense, and survive waves of zombies
+    emerging from the shadows of the trees and the decrepit house.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

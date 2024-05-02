@@ -13,11 +13,5 @@ EditorBuildSettings:
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/SpaceLevel.unity
-    guid: 9ae5e35cef6c5b44c8384cbd63338ddf
-  - enabled: 1
-    path: Assets/Scenes/ArcticLevel.unity
-    guid: b384387ee7161ca498140ae3d2f3aa6b
-  - enabled: 1
-    path: Assets/Scenes/BattlefieldLevel.unity
-    guid: c8468d311a7295a4183f5fcba804e8a6
+    guid: 3d1a8588f0117a14baec6267feb93443
   m_configObjects: {}

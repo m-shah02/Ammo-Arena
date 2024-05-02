@@ -773,6 +773,7 @@ GameObject:
   - component: {fileID: 271647864}
   - component: {fileID: 271647863}
   - component: {fileID: 271647862}
+  - component: {fileID: 271647866}
   m_Layer: 5
   m_Name: MainUICanvas
   m_TagString: Untagged
@@ -867,6 +868,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &271647866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271647861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2e8bca81101fd4ebce7bde8f4f1bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &290910249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100080, guid: af25c7c73847c324c944f041096a88cd, type: 3}
@@ -1447,7 +1460,7 @@ Transform:
   - {fileID: 1279987859}
   - {fileID: 2145995474}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &454095130
 GameObject:
@@ -2437,7 +2450,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 744066652}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1216659322}
+        m_TargetAssemblyTypeName: GameOverController, Assembly-CSharp
+        m_MethodName: ButtonHandlerRetry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &744066652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2588,7 +2613,7 @@ Transform:
   - {fileID: 196101496}
   - {fileID: 1149296244}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &845757326
 GameObject:
@@ -3550,6 +3575,7 @@ GameObject:
   - component: {fileID: 1216659319}
   - component: {fileID: 1216659321}
   - component: {fileID: 1216659320}
+  - component: {fileID: 1216659322}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
@@ -3618,6 +3644,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216659318}
   m_CullTransparentMesh: 1
+--- !u!114 &1216659322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216659318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e9691cce8c89143b7d2e4b37c9fdcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1236906918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4894,7 +4932,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1752967849}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1216659322}
+        m_TargetAssemblyTypeName: GameOverController, Assembly-CSharp
+        m_MethodName: ButtonHandlerExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1752967849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5375,12 +5425,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879751442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.000015258789, z: 0}
-  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1891775672
 PrefabInstance:
@@ -5667,7 +5717,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971692980
 GameObject:
