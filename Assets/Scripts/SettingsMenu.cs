@@ -13,6 +13,12 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
+        if (resolutionDropdown == null)
+        {
+            Debug.LogError("Resolution Dropdown is not set.");
+            return;
+        }
+
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
