@@ -5,8 +5,8 @@ public class RetryGame : MonoBehaviour
 {
     void Update()
     {
-        // Check if the 'R' key is pressed
-        if (Input.GetKeyDown(KeyCode.R))
+        // Check if the 'N' key is pressed
+        if (Input.GetKeyDown(KeyCode.N))
         {
             ReloadScene();
         }
